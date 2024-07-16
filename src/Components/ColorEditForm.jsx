@@ -41,7 +41,7 @@ function ColorEditForm() {
       .then(res => res.json())
       .then(res => setColor(res))
       .catch(err => console.log(err))
-  }, [])
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
