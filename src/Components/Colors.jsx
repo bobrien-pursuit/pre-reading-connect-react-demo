@@ -3,8 +3,19 @@ import Color from "./Color";
 
 const API = import.meta.env.VITE_API_URL;
 
+
 function Colors() {
   const [colors, setColors] = useState([]);
+
+  useEffect(() => {
+    fetch(`${API}/colors`)
+      .then(res => res.json())
+      .then(res => {
+        console.log(res)
+        setColors(res);
+      })
+      .catch(err => console.log(err))
+  }, [])
 
   return (
     <div className="Colors">
