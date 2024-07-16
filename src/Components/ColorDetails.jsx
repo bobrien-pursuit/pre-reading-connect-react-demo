@@ -7,7 +7,7 @@ function ColorDetails() {
   const [color, setColor] = useState({ name: "" });
   const [background, setBackground] = useState("");
   let navigate = useNavigate();
-  let { index } = useParams();
+  let { id } = useParams();
 
   // On page load, load color details
 
@@ -24,7 +24,7 @@ function ColorDetails() {
       className={!background ? "no-such-color" : null}
     >
       <h3>
-        {color.isFavorite ? <span>⭐️</span> : null}
+        {color.is_favorite ? <span>⭐️</span> : null}
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         {color.name}
       </h3>
@@ -38,7 +38,7 @@ function ColorDetails() {
         </div>
         <div>
           {" "}
-          <Link to={`/colors/${index}/edit`}>
+          <Link to={`/colors/${id}/edit`}>
             <button>Edit</button>
           </Link>
         </div>
