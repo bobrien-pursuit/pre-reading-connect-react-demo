@@ -30,7 +30,7 @@ function Colors() {
           </thead>
           <tbody>
             {colors.map((color) => {
-              return <Color key={color.id} color={color} index={color.id} />;
+              return <Color key={color.id} color={color} id={color.id} />;
             })}
           </tbody>
         </table>

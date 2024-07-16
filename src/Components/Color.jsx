@@ -11,7 +11,7 @@ function Color({ color, id }) {
         )}
       </td>
       <td>
-        <Link to={`/colors/${id}`}> {color.name}</Link>
+        <Link to={`/colors/${color.id}`}> {color.name}</Link>
       </td>
       <td>
         {" "}
