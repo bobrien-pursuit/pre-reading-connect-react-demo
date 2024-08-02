@@ -36,6 +36,7 @@ function ColorNewForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     addColor();
+    navigate("/colors");
   };
 
   return (
